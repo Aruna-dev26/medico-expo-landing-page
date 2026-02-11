@@ -182,8 +182,7 @@ section {
    CARD GRIDS
 ========================= */
 .grid-2,
-.grid-3,
-.grid-4 {
+.grid-3 {
   display: grid;
   gap: 25px;
 }

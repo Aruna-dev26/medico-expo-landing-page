@@ -13,6 +13,20 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", revealSections);
   revealSections();
 
+  // ===== Smooth Scroll (Lenis) =====
+const lenis = new Lenis({
+  duration: 1.2,
+  smooth: true,
+  smoothTouch: true
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
   // ===== Form Elements =====
   const form = document.getElementById("registrationForm");
   const fullNameInput = document.getElementById("fullName");
